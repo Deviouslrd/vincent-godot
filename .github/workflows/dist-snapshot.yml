@@ -30,10 +30,6 @@ jobs:
           use-dotnet: false
           include-templates: false
 
-      - name: Create Export Template (Windows)
-        if: matrix.os == 'windows-latest'
-        run: scons platform=windows profile=custom.py
-
       - name: Compile Application (Windows)
         if: matrix.os == 'windows-latest'
         run: |
